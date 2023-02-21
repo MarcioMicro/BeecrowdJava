@@ -1,15 +1,13 @@
-package beginner;
+package beginner.page05;
 
 import java.util.Scanner;
 
-public class Teste {
+public class Bee1435 {
 	public static void main(String[] args) {
 		int N, half, scope, end;
-		String answer;
 		Scanner s = new Scanner(System.in);
 				
 		while ((N = s.nextInt())!=0) {
-			answer = "";
 			half = N/2;
 			scope=0;
 			int[][] matrix = new int[N][N];
@@ -22,14 +20,15 @@ public class Teste {
 				}
 				scope++;
 			}
-			for (int i = 0; i < N; i++) {
-	            answer += String.format("%3d", matrix[i][0]);
+			StringBuilder sb = new StringBuilder();
+	        for (int i = 0; i < N; i++) {
+	            sb.append(String.format("%3d", matrix[i][0]));
 	            for (int j = 1; j < N; j++) {
-	                answer += String.format("%4d", matrix[i][j]);
+	                sb.append(String.format("%4d", matrix[i][j]));
 	            }
-	            answer += "\n";
+	            sb.append("\n");
 	        }
-	        System.out.println(answer);
+	        System.out.println(sb);
 
 		}
 		s.close();
